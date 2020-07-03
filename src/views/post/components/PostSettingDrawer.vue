@@ -1,6 +1,6 @@
 <template>
   <a-drawer
-    title="文章设置"
+    title="职位设置"
     :width="isMobile()?'100%':'480'"
     placement="right"
     closable
@@ -19,12 +19,12 @@
           <div class="post-setting-drawer-item">
             <a-form layout="vertical">
               <a-form-item
-                label="文章标题："
+                label="职位标题："
                 v-if="needTitle"
               >
                 <a-input v-model="selectedPost.title" />
               </a-form-item>
-              <a-form-item label="文章别名：">
+              <a-form-item label="职位别名：">
                 <template slot="help">
                   <span v-if="options.post_permalink_type === 'DEFAULT'">{{ options.blog_url }}/{{ options.archives_prefix }}/{{ selectedPost.slug?selectedPost.slug:'${slug}' }}{{ (options.path_suffix?options.path_suffix:'') }}</span>
                   <span v-else-if="options.post_permalink_type === 'DATE'">{{ options.blog_url }}{{ selectedPost.createTime?selectedPost.createTime:new Date() | moment_post_date }}{{ selectedPost.slug?selectedPost.slug:'${slug}' }}{{ (options.path_suffix?options.path_suffix:'') }}</span>
@@ -39,7 +39,7 @@
                   showTime
                   :defaultValue="pickerDefaultValue"
                   format="YYYY-MM-DD HH:mm:ss"
-                  placeholder="选择文章发表时间"
+                  placeholder="选择职位发表时间"
                   @change="onPostDateChange"
                   @ok="onPostDateOk"
                 />
@@ -155,7 +155,7 @@
                   type="textarea"
                   :autoSize="{ minRows: 5 }"
                   v-model="selectedPost.summary"
-                  placeholder="如不填写，会从文章中自动截取"
+                  placeholder="如不填写，会从职位中自动截取"
                 />
               </a-form-item>
             </a-form>
@@ -238,7 +238,7 @@
                   type="textarea"
                   :autoSize="{ minRows: 5 }"
                   v-model="selectedPost.metaDescription"
-                  placeholder="如不填写，会从文章中自动截取"
+                  placeholder="如不填写，会从职位中自动截取"
                 />
               </a-form-item>
             </a-form>
@@ -486,7 +486,7 @@ export default {
       if (!this.selectedPost.title) {
         this.$notification['error']({
           message: '提示',
-          description: '文章标题不能为空！'
+          description: '职位标题不能为空！'
         })
         return
       }
@@ -511,7 +511,7 @@ export default {
             if (this.selectedPost.status === 'DRAFT') {
               this.$message.success('草稿保存成功！')
             } else {
-              this.$message.success('文章更新成功！')
+              this.$message.success('职位更新成功！')
             }
 
             this.$emit('onSaved', true)
@@ -531,7 +531,7 @@ export default {
             if (this.selectedPost.status === 'DRAFT') {
               this.$message.success('草稿保存成功！')
             } else {
-              this.$message.success('文章发布成功！')
+              this.$message.success('职位发布成功！')
             }
 
             this.$emit('onSaved', true)

@@ -13,7 +13,7 @@
           placeholder="多个关键词以英文状态下的逗号隔开"
         />
       </a-form-item>
-      <a-form-item label="博客描述：">
+      <a-form-item label="系统描述：">
         <a-input
           type="textarea"
           :autoSize="{ minRows: 5 }"

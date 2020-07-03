@@ -16,4 +16,4 @@ export const setDocumentTitle = function(title) {
   }
 }
 
-export const domTitle = 'Halo Dashboard'
+export const domTitle = '重庆IT内推圈'

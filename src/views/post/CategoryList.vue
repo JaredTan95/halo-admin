@@ -259,7 +259,7 @@ const columns = [
     dataIndex: 'description'
   },
   {
-    title: '文章数',
+    title: '职位数',
     dataIndex: 'postCount',
     scopedSlots: { customRender: 'postCount' }
   },

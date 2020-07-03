@@ -30,7 +30,7 @@
             </a-tab-pane>
             <a-tab-pane key="post">
               <span slot="tab">
-                <a-icon type="form" />文章设置
+                <a-icon type="form" />职位设置
               </span>
               <PostTab
                 :options="options"

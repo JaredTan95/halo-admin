@@ -4,10 +4,10 @@
       layout="vertical"
       :wrapperCol="wrapperCol"
     >
-      <a-form-item label="博客标题：">
+      <a-form-item label="系统标题：">
         <a-input v-model="options.blog_title" />
       </a-form-item>
-      <a-form-item label="博客地址：">
+      <a-form-item label="系统地址：">
         <a-input
           v-model="options.blog_url"
           placeholder="如：https://halo.run"
@@ -116,7 +116,7 @@ export default {
       if (!this.options.blog_title) {
         this.$notification['error']({
           message: '提示',
-          description: '博客标题不能为空！'
+          description: '系统标题不能为空！'
         })
         return
       }
@@ -124,7 +124,7 @@ export default {
       if (!this.options.blog_url) {
         this.$notification['error']({
           message: '提示',
-          description: '博客地址不能为空！'
+          description: '系统地址不能为空！'
         })
         return
       }

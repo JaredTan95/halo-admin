@@ -454,7 +454,7 @@ const postColumns = [
     scopedSlots: { customRender: 'status' }
   },
   {
-    title: '评论文章',
+    title: '评论职位',
     dataIndex: 'post',
     width: '200px',
     ellipsis: true,

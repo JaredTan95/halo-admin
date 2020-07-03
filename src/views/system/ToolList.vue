@@ -62,7 +62,7 @@
             :bodyStyle="{ padding: '16px' }"
           >
             <div slot="title">
-              <a-icon type="hdd" /> 博客备份
+              <a-icon type="hdd" /> 系统备份
             </div>
             <p style="min-height: 50px;">支持备份全站数据和数据导出，支持下载到本地</p>
 
@@ -100,9 +100,9 @@
             :bodyStyle="{ padding: '16px' }"
           >
             <div slot="title">
-              <a-icon type="file-markdown" /> Markdown 文章导入
+              <a-icon type="file-markdown" /> Markdown 职位导入
             </div>
-            <p style="min-height: 50px;">支持 Hexo/Jekyll 文章导入并解析元数据</p>
+            <p style="min-height: 50px;">支持 Hexo/Jekyll 职位导入并解析元数据</p>
             <a-button
               type="primary"
               style="float:right"
@@ -112,7 +112,7 @@
         </a-col>
       </a-row>
       <a-modal
-        title="Markdown 文章导入"
+        title="Markdown 职位导入"
         v-model="markdownUpload"
         :footer="null"
         destroyOnClose

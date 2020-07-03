@@ -68,7 +68,7 @@
                 <span
                   slot="title"
                   v-if="this.type=='posts'"
-                >评论文章：</span>
+                >评论职位：</span>
                 <span
                   slot="title"
                   v-else-if="this.type=='sheets'"

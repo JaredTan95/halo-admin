@@ -22,7 +22,7 @@
             <a-steps :current="stepCurrent">
               <a-step title="博主信息">
               </a-step>
-              <a-step title="博客信息">
+              <a-step title="系统信息">
               </a-step>
               <a-step title="数据导入">
               </a-step>
@@ -135,7 +135,7 @@
               <a-form-item class="animated fadeInUp">
                 <a-input
                   v-model="installation.url"
-                  placeholder="博客地址"
+                  placeholder="系统地址"
                 >
                   <a-icon
                     slot="prefix"
@@ -150,7 +150,7 @@
               >
                 <a-input
                   v-model="installation.title"
-                  placeholder="博客标题"
+                  placeholder="系统标题"
                 >
                   <a-icon
                     slot="prefix"

@@ -49,12 +49,12 @@
               :loading="statisticsLoading"
               itemLayout="horizontal"
             >
-              <a-list-item>累计发表了 {{ statistics.postCount || 0 }} 篇文章。</a-list-item>
+              <a-list-item>累计发表了 {{ statistics.postCount || 0 }} 篇职位。</a-list-item>
               <a-list-item>累计创建了 {{ statistics.categoryCount || 0 }} 个分类。</a-list-item>
               <a-list-item>累计创建了 {{ statistics.tagCount || 0 }} 个标签。</a-list-item>
               <a-list-item>累计获得了 {{ statistics.commentCount || 0 }} 条评论。</a-list-item>
               <a-list-item>累计添加了 {{ statistics.linkCount || 0 }} 个友链。</a-list-item>
-              <a-list-item>文章总阅读 {{ statistics.visitCount || 0 }} 次。</a-list-item>
+              <a-list-item>职位总阅读 {{ statistics.visitCount || 0 }} 次。</a-list-item>
               <a-list-item></a-list-item>
             </a-list>
           </div>

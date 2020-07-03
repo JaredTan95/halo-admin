@@ -6,7 +6,7 @@
           <a-input
             v-model="postToStage.title"
             size="large"
-            placeholder="请输入文章标题"
+            placeholder="请输入职位标题"
           />
         </div>
 
@@ -263,7 +263,7 @@ export default {
     onContentChange(val) {
       this.postToStage.originalContent = val
     },
-    // 关闭文章设置抽屉
+    // 关闭职位设置抽屉
     onPostSettingsClose() {
       this.postSettingVisible = false
     },

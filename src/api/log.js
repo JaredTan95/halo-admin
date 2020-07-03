@@ -32,19 +32,19 @@ logApi.clear = () => {
 logApi.logType = {
   BLOG_INITIALIZED: {
     value: 0,
-    text: '博客初始化'
+    text: '系统初始化'
   },
   POST_PUBLISHED: {
     value: 5,
-    text: '文章发布'
+    text: '职位发布'
   },
   POST_EDITED: {
     value: 15,
-    text: '文章修改'
+    text: '职位修改'
   },
   POST_DELETED: {
     value: 20,
-    text: '文章删除'
+    text: '职位删除'
   },
   LOGGED_IN: {
     value: 25,

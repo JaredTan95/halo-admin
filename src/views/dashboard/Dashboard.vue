@@ -11,7 +11,7 @@
       >
         <analysis-card
           :loading="statisticsLoading"
-          title="文章"
+          title="职位"
           :number="statisticsData.postCount"
         >
           <router-link
@@ -58,7 +58,7 @@
         >
           <a-tooltip slot="action">
             <template slot="title">
-              文章阅读共 {{ statisticsData.visitCount }} 次
+              职位阅读共 {{ statisticsData.visitCount }} 次
             </template>
             <a href="javascript:void(0);">
               <a-icon type="info-circle-o" />
@@ -80,7 +80,7 @@
           :number="statisticsData.establishDays"
         >
           <a-tooltip slot="action">
-            <template slot="title">博客建立于 {{ statisticsData.birthday | moment }}</template>
+            <template slot="title">系统建立于 {{ statisticsData.birthday | moment }}</template>
             <a href="javascript:void(0);">
               <a-icon type="info-circle-o" />
             </a>
@@ -107,7 +107,7 @@
             <a-tabs type="card">
               <a-tab-pane
                 key="1"
-                tab="最近文章"
+                tab="最近职位"
               >
                 <a-list :dataSource="latestPosts">
                   <a-list-item
@@ -148,7 +148,7 @@
                 <div class="custom-tab-wrapper">
                   <a-tabs>
                     <a-tab-pane
-                      tab="文章"
+                      tab="职位"
                       key="1"
                     >
                       <recent-comment-tab type="posts"></recent-comment-tab>

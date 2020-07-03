@@ -22,10 +22,10 @@
               :md="6"
               :sm="24"
             >
-              <a-form-item label="文章状态：">
+              <a-form-item label="职位状态：">
                 <a-select
                   v-model="queryParam.status"
-                  placeholder="请选择文章状态"
+                  placeholder="请选择职位状态"
                   @change="handleQuery()"
                 >
                   <a-select-option
@@ -78,7 +78,7 @@
           <a-button
             type="primary"
             icon="plus"
-          >写文章</a-button>
+          >发布职位</a-button>
         </router-link>
         <a-dropdown v-show="queryParam.status!=null && queryParam.status!='' && !isMobile()">
           <a-menu slot="overlay">
@@ -174,7 +174,7 @@
                   </a-menu-item>
                   <a-menu-item v-else-if="item.status === 'RECYCLE'">
                     <a-popconfirm
-                      :title="'你确定要发布【' + item.title + '】文章？'"
+                      :title="'你确定要发布【' + item.title + '】职位？'"
                       @confirm="handleEditStatusClick(item.id,'PUBLISHED')"
                       okText="确定"
                       cancelText="取消"
@@ -184,7 +184,7 @@
                   </a-menu-item>
                   <a-menu-item v-if="item.status === 'PUBLISHED' || item.status === 'DRAFT' || item.status === 'INTIMATE'">
                     <a-popconfirm
-                      :title="'你确定要将【' + item.title + '】文章移到回收站？'"
+                      :title="'你确定要将【' + item.title + '】职位移到回收站？'"
                       @confirm="handleEditStatusClick(item.id,'RECYCLE')"
                       okText="确定"
                       cancelText="取消"
@@ -194,7 +194,7 @@
                   </a-menu-item>
                   <a-menu-item v-else-if="item.status === 'RECYCLE'">
                     <a-popconfirm
-                      :title="'你确定要永久删除【' + item.title + '】文章？'"
+                      :title="'你确定要永久删除【' + item.title + '】职位？'"
                       @confirm="handleDeleteClick(item.id)"
                       okText="确定"
                       cancelText="取消"
@@ -429,7 +429,7 @@
               v-if="post.status === 'PUBLISHED' || post.status === 'DRAFT' || post.status === 'INTIMATE'"
             >编辑</a>
             <a-popconfirm
-              :title="'你确定要发布【' + post.title + '】文章？'"
+              :title="'你确定要发布【' + post.title + '】职位？'"
               @confirm="handleEditStatusClick(post.id,'PUBLISHED')"
               okText="确定"
               cancelText="取消"
@@ -441,7 +441,7 @@
             <a-divider type="vertical" />
 
             <a-popconfirm
-              :title="'你确定要将【' + post.title + '】文章移到回收站？'"
+              :title="'你确定要将【' + post.title + '】职位移到回收站？'"
               @confirm="handleEditStatusClick(post.id,'RECYCLE')"
               okText="确定"
               cancelText="取消"
@@ -451,7 +451,7 @@
             </a-popconfirm>
 
             <a-popconfirm
-              :title="'你确定要永久删除【' + post.title + '】文章？'"
+              :title="'你确定要永久删除【' + post.title + '】职位？'"
               @confirm="handleDeleteClick(post.id)"
               okText="确定"
               cancelText="取消"
@@ -520,7 +520,7 @@ import categoryApi from '@/api/category'
 import postApi from '@/api/post'
 const columns = [
   {
-    title: '标题',
+    title: '职位标题',
     dataIndex: 'title',
     width: '150px',
     ellipsis: true,
@@ -765,7 +765,7 @@ export default {
     handleClearRowKeys() {
       this.selectedRowKeys = []
     },
-    // 关闭文章设置抽屉
+    // 关闭职位设置抽屉
     onPostSettingsClose() {
       this.postSettingVisible = false
       this.selectedPost = {}

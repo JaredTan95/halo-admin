@@ -4,7 +4,7 @@
       <a-tabs type="card">
         <a-tab-pane
           key="1"
-          tab="文章"
+          tab="职位"
         >
           <comment-tab type="posts"></comment-tab>
         </a-tab-pane>

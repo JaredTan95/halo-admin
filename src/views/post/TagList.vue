@@ -93,7 +93,7 @@
             v-else
           >
             <template slot="title">
-              <span>{{ tag.postCount }} 篇文章</span>
+              <span>{{ tag.postCount }} 篇职位</span>
             </template>
             <a-tag
               color="blue"

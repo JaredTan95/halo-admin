@@ -23,19 +23,19 @@ export const asyncRouterMap = [
         name: 'Posts',
         redirect: '/posts/list',
         component: PageView,
-        meta: { title: '文章', icon: 'form' },
+        meta: { title: '职位', icon: 'form' },
         children: [
           {
             path: '/posts/list',
             name: 'PostList',
             component: () => import('@/views/post/PostList'),
-            meta: { title: '所有文章', hiddenHeaderContent: false }
+            meta: { title: '所有职位', hiddenHeaderContent: false }
           },
           {
             path: '/posts/write',
             name: 'PostEdit',
             component: () => import('@/views/post/PostEdit'),
-            meta: { title: '写文章', hiddenHeaderContent: false, keepAlive: false }
+            meta: { title: '发布职位', hiddenHeaderContent: false, keepAlive: false }
           },
           {
             path: '/categories',
@@ -177,7 +177,7 @@ export const asyncRouterMap = [
             path: '/system/options',
             name: 'SystemOptions',
             component: () => import('@/views/system/SystemOptions'),
-            meta: { title: '博客设置', hiddenHeaderContent: false }
+            meta: { title: '系统设置', hiddenHeaderContent: false }
           },
           {
             path: '/system/tools',

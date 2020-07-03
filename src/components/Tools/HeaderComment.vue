@@ -13,7 +13,7 @@
         <div class="custom-tab-wrapper">
           <a-tabs>
             <a-tab-pane
-              tab="文章"
+              tab="职位"
               key="1"
             >
               <a-list :dataSource="converttedPostComments">
